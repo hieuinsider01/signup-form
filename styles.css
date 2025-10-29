@@ -1,5 +1,118 @@
-html {
+@font-face {
+  font-family: Norse-Bold;
+  src: url(./Norse-Bold.otf);
+}
+@font-face {
+  font-family: Montserrat-regular;
+  src: url(./Montserrat-Regular.ttf);
+}
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.signup-img {
+  position: relative;
+  width: 35%;
+  background-image: url(./halie-west-25xggax4bSA-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.signup-odin-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.odin-logo-name {
+  font-family: Norse-Bold, sans-serif;
+  color: #fff;
+  font-size: 4rem;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo-img {
+  width: 80px;
+  height: auto;
+}
+
+.logo-footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.logo-footer-text a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  gap: 48px;
+  background-color: #f9fafb;
+  font-family: Montserrat, sans-serif;
+}
+
+.signup-info-description {
+  padding: 0 48px;
+}
+
+#line-3 {
+  margin-top: 24px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 48px 0;
+  padding: 48px;
+  background-color: #fff;
+}
+
+.form-group {
+  display: flex;
+  align-self: start;
+  gap: 48px;
+  width: 100%;
+}
+
+.form-group-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-item input {
+  /* padding: 6px; */
+  /* margin-top: 8px; */
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
 }
