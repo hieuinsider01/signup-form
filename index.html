@@ -1,72 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
     <div class="wrapper">
-        <aside class="signup-img">
-            <div class="logo-wrapper">
-                <div class="signup-odin-logo">
-                    <img class="logo-img" src="./odin-lined.png" alt="">
-                    <h1 class="odin-logo-name">odin</h1>
+      <aside class="signup-img">
+        <div class="logo-wrapper">
+          <div class="signup-odin-logo">
+            <img class="logo-img" src="./odin-lined.png" alt="" />
+            <h1 class="odin-logo-name">odin</h1>
+          </div>
+          <div class="logo-footer">
+            <p class="logo-footer-text">
+              Photo By
+              <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on
+              <a
+                href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA"
+                >Unsplash</a
+              >
+            </p>
+          </div>
+        </div>
+      </aside>
+      <main class="signup">
+        <div class="signup-info">
+          <h2 class="signup-info-description" id="line-1">
+            This is not real online service! You know you need something like
+            this in your like to help you realize your deepest dreams.
+          </h2>
+          <h2 class="signup-info-description" id="line-2">
+            Sign up <em>now</em> to get started.
+          </h2>
+          <h2 class="signup-info-description" id="line-3">
+            You <em>know</em> you want to.
+          </h2>
+        </div>
+        <form id="signup-form" action="#" class="signup-form" method="post">
+          <h2 class="signup-title">Let's do this!</h2>
+          <div class="form-group">
+            <div class="form-group-cols1">
+              <div class="form-group-item">
+                <label for="first-name">first name</label>
+                <input type="text" id="first-name" name="first-name" required />
+              </div>
+              <div class="form-group-item">
+                <label for="email">email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group-item">
+                <label for="password">password</label>
+                <div class="password-input-wrapper">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    minlength="8"
+                  />
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    aria-label="Toggle password visibility"
+                  >
+                    👁️
+                  </button>
                 </div>
-                <div class="logo-footer">
-                    <p class="logo-footer-text">Photo By <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a></p>
+                <div class="password-requirements">
+                  <div class="requirement-item" id="req-capital">
+                    At least one capital letter
+                  </div>
+                  <div class="requirement-item" id="req-special">
+                    At least one special character
+                  </div>
+                  <div class="requirement-item" id="req-number">
+                    At least one number
+                  </div>
                 </div>
+              </div>
             </div>
-            
-        </aside>
-        <main class="signup">
-            <div class="signup-info">
-                <h2 class="signup-info-description" id="line-1">This is not real online service! You know you need something like this in your like to help you realize your deepest dreams.</h2>
-                <h2 class="signup-info-description" id="line-2">Sign up to get started.</h2>
-                <h2 class="signup-info-description" id="line-3">You know you want to.</h2>
-            </div>
-            <form action="#" class="signup-form" method="post">
-                <h2 class="signup-title">
-                    Let's do this!
-                </h2>
-                <div class="form-group">
-                    <div class="form-group-cols1">
-                        <div class="form-group-item">
-                            <label for="first-name">first name</label>
-                            <input type="text" id="first-name" name="first-name" required>   
-                        </div>
-                        <div class="form-group-item">
-                            <label for="email">email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group-item">
-                            <label for="password">password</label>
-                            <input type="password" id="password" name="password" required>                        
-                    </div>
-                    </div>
-                    <div class="form-group-cols2">
-                        <div class="form-group-item">
-                            <label for="last-name">last name</label>
-                        <input type="text" id="last-name" name="last-name" required>
-                        </div>
-                        <div class="form-group-item">
-                            <label for="phone-number">phone number</label>
-                            <input type="tel" id="phone-number" name="phone-number" required> 
-                        </div>
-                        <div class="form-group-item">
-                            <label for="confirm-password">confirm password</label>
-                            <input type="password" id="confirm-password" name="confirm-password" required>                      
-                        </div>
-                    </div>
-                    
+            <div class="form-group-cols2">
+              <div class="form-group-item">
+                <label for="last-name">last name</label>
+                <input type="text" id="last-name" name="last-name" required />
+              </div>
+              <div class="form-group-item">
+                <label for="phone-number">phone number</label>
+                <input
+                  type="tel"
+                  id="phone-number"
+                  name="phone-number"
+                  required
+                  pattern="^0[0-9]{9,}"
+                  title="Phone number must start with 0 and have at least 10 digits"
+                />
+              </div>
+              <div class="form-group-item">
+                <label for="confirm-password">confirm password</label>
+                <div class="password-input-wrapper">
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    aria-label="Toggle password visibility"
+                  >
+                    👁️
+                  </button>
                 </div>
-            </form>
-            <div class="signup-advance">
-                <div class="signup-btn"><a href="#">Create Account</a></div>
-                <p class="confirm-login">Already have an account? <a href="#">Login</a></p>
+              </div>
             </div>
-        </main>
+          </div>
+          <div
+            id="confirm-password-error"
+            style="
+              display: none;
+              color: #ff0000;
+              font-size: 0.8rem;
+              margin-top: 4px;
+              padding-left: 48px;
+            "
+          >
+            Passwords do not match
+          </div>
+          <div class="signup-advance">
+            <button type="submit" class="signup-btn">Create Account</button>
+            <p class="confirm-login">
+              Already have an account? <a href="#">Login</a>
+            </p>
+          </div>
+        </form>
+      </main>
     </div>
-</body>
+  </body>
 </html>

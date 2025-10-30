@@ -10,6 +10,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .wrapper {
@@ -23,7 +24,7 @@
   background-image: url(./halie-west-25xggax4bSA-unsplash.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .signup-odin-logo {
@@ -75,7 +76,8 @@
   flex-direction: column;
   justify-content: center;
   width: 65%;
-  gap: 48px;
+  min-height: 100vh;
+  padding: 144px 0;
   background-color: #f9fafb;
   font-family: Montserrat, sans-serif;
 }
@@ -95,24 +97,137 @@
   margin: 48px 0;
   padding: 48px;
   background-color: #fff;
+  box-shadow: 14px 6px 6px 0px #ccc;
 }
 
 .form-group {
   display: flex;
   align-self: start;
-  gap: 48px;
+  gap: 72px;
   width: 100%;
 }
 
 .form-group-item {
   display: flex;
+  width: 250px;
   flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.form-group-item input.error {
+  border-color: #ff0000;
+}
+
+.password-requirements {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.requirement-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0;
+}
+
+.requirement-item::before {
+  content: "✓";
+  opacity: 0.3;
+  color: #596d48;
+}
+
+.requirement-item.valid::before {
+  opacity: 1;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.password-toggle:hover {
+  opacity: 1;
 }
 
 .form-group-item input {
-  /* padding: 6px; */
-  /* margin-top: 8px; */
+  padding: 8px 12px;
   border: 1px solid #d1d5db;
   border-radius: 4px;
   font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group-item input:focus {
+  outline: none;
+  border-color: #596d48;
+  box-shadow: 0 0 0 2px rgba(89, 109, 72, 0.2);
+}
+
+.form-group-item label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #575f69;
+}
+
+.signup-advance {
+  padding: 0 48px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  gap: 24px;
+}
+
+.signup-btn {
+  width: 200px;
+  padding: 16px 32px;
+  background-color: #596d48;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px 0px #ccc;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+}
+
+.signup-btn:hover {
+  cursor: pointer;
+  background-color: rgba(89, 109, 72, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.signup-btn:active {
+  transform: translateY(0);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-group-item input:focus {
+  transform: translateY(-1px);
+}
+
+.confirm-login a {
+  color: #596d48;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.confirm-login a:hover {
+  text-decoration: underline;
 }
